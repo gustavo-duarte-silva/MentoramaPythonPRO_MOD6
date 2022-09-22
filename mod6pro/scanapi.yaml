@@ -1,0 +1,10 @@
+endpoints:
+  - name: mainFlaskAPI
+    path: http://127.0.0.1:5000/
+    requests:
+      - name: mainFlaskAPI
+        path: /
+        method: get
+        tests:
+          - name: status_code_is_200
+            assert: ${{ response.status_code == 200 }}
